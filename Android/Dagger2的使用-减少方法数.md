@@ -3,13 +3,17 @@ Dagger2的使用-减少方法数
 ================================
 　　Dagger2--一个完全静态的，编译时依赖注入框架，是Azimo Android app的代码支柱。我们已经意识到，随着开发团队的增长，干净的代码架构（Clean Code structure）已经是所有项目中最重要的事情。低耦合、易测试和更好的扩展性--这些只是使用像Dagger这样的依赖注入框架的一小部分好处.  
 　　现在教你如何在android项目中开始使用dagger和依赖注入的说明和代码到处都是，如果你需要，下 面这些可能帮助你：  
-    [Introduction to Dependency Injection](http://frogermcs.github.io/dependency-injection-with-dagger-2-introdution-to-di/)  
- 　 [Dagger 2 API]()  
- 　 [Dagger 2 — custom scopes]()  
- 　　[Dagger 2 — graph creation performance]()  
- 　　[Dependency injection with Dagger 2 — Producers]()  
- 　 [Async Injection in Dagger 2 with RxJava]()  
- 　 [Inject everything — ViewHolder and Dagger 2 (with Multibinding and AutoFactory example)]()  
+
+​	[Introduction to Dependency Injection](http://frogermcs.github.io/dependency-injection-with-dagger-2-introdution-to-di/)
+
+ 　  	[Dagger 2 API](http://frogermcs.github.io/dependency-injection-with-dagger-2-the-api/)
+ 　  	[Dagger 2 — custom scopes](http://frogermcs.github.io/dependency-injection-with-dagger-2-custom-scopes/)  
+ 　	[Dagger 2 — graph creation performance](http://frogermcs.github.io/dagger-graph-creation-performance/)
+
+ 　	[Dependency injection with Dagger 2 — Producers](https://medium.com/@froger_mcs/dependency-injection-with-dagger-2-producers-c424ddc60ba3#.o9ks10hzp)
+
+ 　 	[Async Injection in Dagger 2 with RxJava](https://medium.com/@froger_mcs/async-injection-in-dagger-2-with-rxjava-e7df503343c0#.5vuheb5ui)
+ 　 	[Inject everything — ViewHolder and Dagger 2 (with Multibinding and AutoFactory example)](https://medium.com/@froger_mcs/inject-everything-viewholder-and-dagger-2-e1551a76a908#.ojfwmz35r)
 　　但是这些文章都仅仅告诉你怎么开始去用DI,这就是为什么我们今天想分享我们两年来使用Dagger2的经验。  
 　　＠Component vs Subcomponent
 　　一般来说简介中Custom Scopes一般都讲得不清楚，但是这确实是Dagger2中一个强劲的功能。在复杂app中仅仅使用@Singleton 并不会让你更容易。  
@@ -17,6 +21,7 @@ Dagger2的使用-减少方法数
 　　我们接下来讨论一下怎么做，无论你是否会在生产环境中使用自定义scope。
 　　在Dagger2中我们有两种方法来创建自定义Scopes和Component用以内建和扩展对象图。
 　　我们可以创建另一个@component明确表明是扩展component  
+
 ``` java
 @UserScope
 @Component(
